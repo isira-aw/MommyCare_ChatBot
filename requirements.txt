@@ -1,11 +1,11 @@
 fastapi
 uvicorn
-speechrecognition
 pydantic
 python-dotenv
 deep-translator
+speechrecognition
 groq
-pinecone-client
+pinecone
 semantic-router
 transformers
 sentence-transformers
