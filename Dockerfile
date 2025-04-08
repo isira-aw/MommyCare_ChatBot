@@ -1,10 +1,10 @@
-# Use an official Python base image
+# Use official Python base image
 FROM python:3.10-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
 
-# Install necessary system dependencies (e.g., for SpeechRecognition and OpenVINO if needed)
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     libglib2.0-0 \
@@ -15,17 +15,17 @@ RUN apt-get update && apt-get install -y \
     sox \
     && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy files to container
 COPY . /app
 
-# Install Python dependencies from requirements.txt
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 8080 for the FastAPI application
+# Railway automatically assigns a PORT
 EXPOSE 8080
 
-# Command to run the FastAPI application using uvicorn
-CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8080"]
+# Run the app
+CMD ["python", "api.py"]
