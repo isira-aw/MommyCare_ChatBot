@@ -1,18 +1,31 @@
-# Use an official python base image
-FROM python:3.10
+# Use an official Python base image
+FROM python:3.10-slim
 
-# Install prerequisites for OpenVINO, etc. (this can get quite large)
-RUN apt-get update && apt-get install -y ... # necessary dependencies
+# Set environment variables
+ENV PYTHONUNBUFFERED 1
 
-# Copy your project
+# Install necessary system dependencies (e.g., for SpeechRecognition and OpenVINO if needed)
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    ffmpeg \
+    sox \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set the working directory inside the container
 WORKDIR /app
+
+# Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install Python deps
+# Install Python dependencies from requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose a port if your service is an API
-EXPOSE 8000
+# Expose port 8080 for the FastAPI application
+EXPOSE 8080
 
-# Command to run (for example, your Telegram bot or API)
-CMD ["python", "telegram_bot.py"]
+# Command to run the FastAPI application using uvicorn
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8080"]
