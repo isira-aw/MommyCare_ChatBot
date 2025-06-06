@@ -12,16 +12,11 @@ load_dotenv()
 
 # Pinecone client using the new API:
 from pinecone import Pinecone, ServerlessSpec
-
-# Semantic encoder from semantic_router
 from semantic_router.encoders import HuggingFaceEncoder
-
-# Groq client for Llama 70B generation
 from groq import Groq
 
 # ----------------------------
 # Retrieve API Keys from .env
-# ----------------------------
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
 if not pinecone_api_key:
     raise ValueError("PINECONE_API_KEY not set in .env file.")
@@ -34,7 +29,6 @@ if not groq_api_key:
 
 # ----------------------------
 # Initialize Pinecone
-# ----------------------------
 pc = Pinecone(api_key=pinecone_api_key)
 spec = ServerlessSpec(cloud="aws", region="us-west-2")
 existing_indexes = [idx["name"] for idx in pc.list_indexes()]
@@ -77,32 +71,34 @@ os.environ["GROQ_API_KEY"] = groq_api_key
 groq_client = Groq(api_key=groq_api_key)
 
 
-def generate_answer(query: str, docs: List[dict]) -> str:
-    """
-    Constructs a prompt using the retrieved documents as context and the user's query,
-    then generates an answer using Groq's chat API with the Llama 70B model.
-    The answer is then appended with a disclaimer and references.
-    """
+def generate_answer(query: str, docs: List[dict], user_intro: str = "") -> str:
     if not docs:
         return "I'm sorry, I couldn't find any relevant information. Please consult your doctor for medical advice."
 
-    # Prepare context text (here we assume 'text' is a short snippet from the chunk)
     context_texts = [doc.get("text", "") for doc in docs]
     context = "\n---\n".join(context_texts)
-
-    # Prepare reference info (we assume 'title' holds source info)
     references = [doc.get("title", "Unknown Source") for doc in docs]
-    #reference_text = "Sources: " + ", ".join(references)
-#"If the answer involves medical advice, always append a disclaimer: 'Disclaimer: This advice is informational only and is not a substitute for professional medical advice. Please contact your doctor for personalized medical guidance.'\n\n"
+
+    # Default fallback if user_intro is not provided
+    if not user_intro.strip():
+        user_intro = (
+            "The mother is assumed to be in a general postpartum state, "
+            "approximately a few weeks after delivery. No severe mental health conditions are reported. "
+            "Provide supportive, medically accurate responses suitable for a new mother adjusting to postpartum life."
+        )
+
+    # Create system prompt
     system_message = (
-            "You are a compassionate and helpful medical chatbot designed for mothers. "
-            "Answer questions in a friendly and supportive manner. "
-            "CONTEXT:\n" + context
+        "You are a compassionate and helpful medical chatbot designed for mothers.\n\n"
+        f"USER CONTEXT:\n{user_intro}\n\n"
+        f"DOCUMENT CONTEXT:\n{context}"
     )
+
     messages = [
         {"role": "system", "content": system_message},
         {"role": "user", "content": query}
     ]
+
     try:
         chat_response = groq_client.chat.completions.create(
             model="llama3-70b-8192",
@@ -112,16 +108,54 @@ def generate_answer(query: str, docs: List[dict]) -> str:
     except Exception as e:
         answer = f"Error generating answer: {str(e)}"
 
-    # Append disclaimer and reference info before finalizing the answer
-    #disclaimer = "\n\nDisclaimer: This advice is informational only and is not a substitute for professional medical advice. Please contact your doctor for personalized medical guidance."
-    #final_answer = answer + "\n\n" + reference_text + disclaimer
-    final_answer = answer + "\n\n"
-    return final_answer
+    return answer + "\n\n"
+
+
+
+# def generate_answer(query: str, docs: List[dict]) -> str:
+#     """
+#     Constructs a prompt using the retrieved documents as context and the user's query,
+#     then generates an answer using Groq's chat API with the Llama 70B model.
+#     The answer is then appended with a disclaimer and references.
+#     """
+#     if not docs:
+#         return "I'm sorry, I couldn't find any relevant information. Please consult your doctor for medical advice."
+
+#     # Prepare context text (here we assume 'text' is a short snippet from the chunk)
+#     context_texts = [doc.get("text", "") for doc in docs]
+#     context = "\n---\n".join(context_texts)
+
+#     # Prepare reference info (we assume 'title' holds source info)
+#     references = [doc.get("title", "Unknown Source") for doc in docs]
+#     #reference_text = "Sources: " + ", ".join(references)
+# #"If the answer involves medical advice, always append a disclaimer: 'Disclaimer: This advice is informational only and is not a substitute for professional medical advice. Please contact your doctor for personalized medical guidance.'\n\n"
+#     system_message = (
+#             "You are a compassionate and helpful medical chatbot designed for mothers. "
+#             "Answer questions in a friendly and supportive manner. "
+#             "CONTEXT:\n" + context
+#     )
+#     messages = [
+#         {"role": "system", "content": system_message},
+#         {"role": "user", "content": query}
+#     ]
+#     try:
+#         chat_response = groq_client.chat.completions.create(
+#             model="llama3-70b-8192",
+#             messages=messages
+#         )
+#         answer = chat_response.choices[0].message.content
+#     except Exception as e:
+#         answer = f"Error generating answer: {str(e)}"
+
+#     # Append disclaimer and reference info before finalizing the answer
+#     #disclaimer = "\n\nDisclaimer: This advice is informational only and is not a substitute for professional medical advice. Please contact your doctor for personalized medical guidance."
+#     #final_answer = answer + "\n\n" + reference_text + disclaimer
+#     final_answer = answer + "\n\n"
+#     return final_answer
 
 
 # ----------------------------
 # Chatbot Conversation Loop
-# ----------------------------
 def chatbot():
     print("Welcome to the MommyCare Medical Chatbot!")
     print("You can ask any questions or share your feelings. Type 'thank you' or 'bye' to exit.\n")
