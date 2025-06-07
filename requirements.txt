@@ -9,3 +9,4 @@ pinecone
 semantic-router
 transformers
 sentence-transformers
+sentencepiece
