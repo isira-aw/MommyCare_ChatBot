@@ -8,7 +8,8 @@ import tempfile
 
 app = FastAPI()
 
-user_intro: str = ""  # Global temporary store
+# Global store for the user intro text
+user_intro: str = ""
 
 class QueryRequest(BaseModel):
     query: str
@@ -16,39 +17,39 @@ class QueryRequest(BaseModel):
 class IntroRequest(BaseModel):
     intro_text: str
 
-# --------------------------
-# Endpoint 1: Set User Intro
+# Endpoint to set initial user intro/context
 @app.post("/set_user_intro/")
 def set_user_intro(request: IntroRequest):
     global user_intro
     user_intro = request.intro_text
     return {"message": "User intro saved successfully."}
 
-# --------------------------
-# Endpoint 2: Get Answer (English or Sinhala)
+# Endpoint for English text query
 @app.post("/get_answer/")
 def get_answer(request: QueryRequest):
     try:
+        # Translate query to English if needed
         english_query = sinhalaToEnglish(request.query)
         docs = get_docs(english_query, top_k=5)
-        answer = generate_answer(request.query, docs)
+        # Pass stored user_intro into answer generation
+        answer = generate_answer(english_query, docs, user_intro)
         return {"answer": answer}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# Endpoint for Sinhala text query
 @app.post("/get_answer_sinhala/")
 def get_answer_sinhala(request: QueryRequest):
     try:
         english_query = sinhalaToEnglish(request.query)
         docs = get_docs(english_query, top_k=5)
-        english_answer = generate_answer(english_query, docs)
+        english_answer = generate_answer(english_query, docs, user_intro)
         sinhala_answer = englishToSinhala(english_answer)
         return {"answer": sinhala_answer}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# --------------------------
-# Endpoint 2: Get Answer (English or Sinhala)
+# Endpoint for voice input
 @app.post("/get_answer_voice/")
 async def get_answer_voice(audio_file: UploadFile = File(...)):
     temp_audio_path = None
@@ -63,7 +64,7 @@ async def get_answer_voice(audio_file: UploadFile = File(...)):
             audio_data = recognizer.record(source)
             text_query = recognizer.recognize_google(audio_data)
         docs = get_docs(text_query, top_k=5)
-        answer = generate_answer(text_query, docs)
+        answer = generate_answer(text_query, docs, user_intro)
         return {"query": text_query, "answer": answer}
     except sr.UnknownValueError:
         raise HTTPException(status_code=400, detail="Speech could not be understood")
@@ -80,13 +81,5 @@ async def get_answer_voice(audio_file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     import uvicorn
-    import os
-    port = int(os.environ.get("PORT", 8080))  # Use Railway's PORT env or default to 8080
+    port = int(os.environ.get("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)
-
-
-
-# POST /set_user_intro/
-# {
-#   "intro_text": "EPDS score: 17 (moderate depression risk). The mother is feeling isolated and has trouble sleeping."
-# }
