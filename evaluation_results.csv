@@ -1,80 +1,306 @@
-question,answer,latency_ms,mem_MB,throughput_toks_per_s,EM,F1,Semantic_Similarity
-How long does postpartum bleeding usually last?,"Postpartum bleeding, also known as lochia, is a normal part of the healing process after childbirth. The duration of postpartum bleeding can vary from woman to woman, but here's a general outline:
+query_id,question,answer,latency_ms,mem_MB,throughput_toks_per_s,EM,F1,BLEU,Semantic_Similarity
+Q1,What are some good postpartum exercises?,"Congratulations on your new baby! Postpartum exercises can help with recovery and overall well-being. Here are some gentle and safe exercises you can try:
 
-* Heavy bleeding (similar to a heavy menstrual period) usually lasts for the first 3-5 days after childbirth.
-* Moderate bleeding can continue for another 1-2 weeks.
-* Light bleeding or spotting can persist for up to 4-6 weeks.
+1. **Kegel exercises**: Squeeze and release your pelvic muscles as if you're stopping the flow of urine. Do 10-15 reps, 3-4 times a day.
+2. **Pelvic tilts**: Lie on your back with knees bent and feet flat. Tilt your pelvis upwards and then back down again. Repeat 10-15 times.
+3. **Deep breathing exercises**: Lie on your back, place one hand on your belly and the other on your chest. Inhale deeply, feeling your belly rise, and exhale slowly, feeling your belly fall.
+4. **Leg raises**: Lie on your back and raise one leg about 6-8 inches off the ground. Hold for a few seconds, then lower. Repeat on the other side.
+5. **Walking**: Take short, gentle walks to help your body heal and regain strength.
 
-Keep in mind that some women may experience heavier or lighter bleeding, and that's still quite normal.
+Remember to listen to your body and only do exercises that feel comfortable and safe for you. If you have any concerns or questions, always consult with your healthcare provider.
 
-It's essential to monitor your bleeding and report any concerns to your healthcare provider, especially if you experience:
+",5649.218699996709,0.01953125,22.12695359095813,0.0,0.053691275167785234,0.0,0.4942156970500946
+Q2,What foods should I avoid while breastfeeding?,"Congratulations on breastfeeding your little one!
 
-* Heavy bleeding that soaks more than one pad in an hour
-* Bleeding that's accompanied by severe pain, fever, or chills
-* Bleeding that hasn't lightened after 10-14 days
+As a general rule, you can eat a healthy and balanced diet while breastfeeding. However, some foods and substances can affect your milk supply or baby's comfort. Here are some foods to limit or avoid:
 
-Remember, it's always better to err on the side of caution and consult your healthcare provider if you have any concerns about your postpartum bleeding.
+1. **Caffeine**: High amounts can make your baby jittery or fussy. Limit to 1-2 cups of coffee or tea per day.
+2. **Spicy or strong-smelling foods**: These can change the flavor of your milk and might upset your baby's tummy.
+3. **High-mercury fish**: Avoid shark, swordfish, and king mackerel, as they contain high levels of mercury.
+4. **Raw or undercooked meat, eggs, and fish**: These can pose a risk of foodborne illness.
+5. **Excessive sugar and salt**: Opt for whole, nutrient-rich foods instead of processed or high-sugar items.
 
-",5887.2761000238825,0.0234375,27.34711218985413,0.0,0.20809248554913296,0.9146757125854492
-What foods should I avoid while breastfeeding?,"As a breastfeeding mom, it's wonderful that you're thinking about what foods to avoid to ensure the best for your little one.
+Additionally, some babies might be sensitive to certain foods in your diet. If you notice any changes in your baby's behavior or digestive issues, you may want to consider avoiding or limiting:
 
-While breast milk is tailored to meet your baby's nutritional needs, some foods can cause issues or allergic reactions in some infants. Here are some common foods that are often recommended to limit or avoid while breastfeeding:
+1. **Citrus fruits or juices**: Some babies might react to the acidity.
+2. **Beans or cabbage**: These can cause gas or discomfort in some babies.
+3. **Dairy or gluten**: If your baby has a sensitivity or allergy, your healthcare provider may recommend avoiding these.
 
-1. **Caffeine**: Excessive caffeine consumption (more than 2-3 cups of coffee, tea, or energy drinks) can lead to fussiness, irritability, and sleep disturbances in babies.
-2. **Spicy or strong-tasting foods**: Some babies might react to strong flavors like garlic, onions, or acidic foods, which can change the taste of breast milk.
-3. **Fish high in mercury**: Fish like shark, swordfish, and king mackerel contain high levels of mercury, which can harm your baby's developing nervous system.
-4. **Raw or undercooked meat, eggs, or fish**: These can contain harmful bacteria like Salmonella, which can cause food poisoning in both you and your baby.
-5. **Unpasteurized dairy products or soft cheeses**: These can contain harmful bacteria like Listeria, which can cause serious infections in pregnant women and newborns.
+Remember, every baby is unique, so monitor your baby's behavior and adjust your diet accordingly. If you have concerns or questions, always consult with your healthcare provider.
 
-Remember, every baby is unique, and what works for one might not work for another. If you notice any changes in your baby's behavior, stool, or skin after eating certain foods, it's always a good idea to talk to your healthcare provider or a lactation consultant for personalized guidance.
+What else would you like to know about breastfeeding or diet?
 
-What specific foods are you concerned about, or would you like more information on?
+",4217.350800012355,0.5390625,49.79429266339068,0.0,0.11016949152542373,0.0,0.6783416867256165
+Q3,When can I start exercising after giving birth?,"Congratulations on your new baby!
 
-",4490.819500002544,0.0078125,55.223773745495556,0.0,0.1645021645021645,0.7274820804595947
-When can I start exercising after giving birth?,"Congratulations on taking the first step towards getting back into shape!
+It's great that you're thinking about exercising again! The ideal time to start exercising after giving birth depends on your individual health, the type of birth you had, and your doctor's guidance.
 
-The American College of Obstetricians and Gynecologists (ACOG) suggests that new mothers can start exercising as soon as they feel comfortable, which is typically around 4-6 weeks postpartum. However, it's essential to get clearance from your healthcare provider before resuming any physical activity.
+ Generally, most healthcare providers recommend waiting until:
 
-Before starting or resuming exercise, consider the following:
+1. **Your postpartum checkup**: Typically around 4-6 weeks after giving birth, when your doctor will assess your overall health and give you the green light for exercise.
+2. **Your bleeding has stopped**: You should wait until you're no longer bleeding or spotting to avoid any complications.
 
-1. **Wait for your healthcare provider's green light**: Get a thorough check-up to ensure your body is healing properly, especially if you had any complications during childbirth or have any underlying medical conditions.
-2. **Listen to your body**: If you experience any discomfort, pain, or heavy bleeding, stop immediately and consult your healthcare provider.
-3. **Start slowly and gently**: Begin with low-impact exercises like pelvic tilts, or walking. Gradually introduce more intense exercises as your body adapts.
-4. **Focus on postpartum recovery exercises**: Include exercises that target your core, pelvic floor, and posture to help your body recover from childbirth.
+Additionally, if you had a **cesarean section (C-section)**, your doctor might recommend waiting a bit longer, usually around 8-10 weeks.
 
-Remember, every woman's healing process is unique, and it's crucial to prioritize your health and well-being.
+When you do start exercising, remember to:
 
-What kind of exercises are you interested in doing, or would you like some recommendations for postpartum recovery exercises?
+* Begin with gentle exercises, like the ones I mentioned earlier (Kegel exercises, pelvic tilts, deep breathing, leg raises, and short walks).
+* Listen to your body and only do exercises that feel comfortable and safe for you.
+* Gradually increase the intensity and duration of your workouts as your body allows.
 
-",4159.9511000094935,0.0,47.35632589516507,0.0,0.1326530612244898,0.7277588844299316
-How often should I feed my newborn?,"Congratulations on the new addition to your family! Feeding your newborn is a crucial aspect of their growth and development. Here are some tips to help you feed your newborn:**
+It's essential to discuss your exercise plan with your healthcare provider to ensure it's tailored to your unique needs and health status.
 
-1. **Breastfeeding:** Hold your baby close, with their head at the level of your breast. Help them latch on by guiding their mouth to your nipple. You may feel a gentle tug or sensation when they start feeding.
-2. **Proper Latch:** Ensure your baby's mouth covers the areola (the darker skin around your nipple). This helps them get the milk efficiently and prevents soreness for you.
-3. **Frequency and Duration:** Newborns typically feed every 2-3 hours, around the clock. Feedings can last anywhere from 10-30 minutes, depending on your baby's hunger and feeding style.
-4. **Watch for Hunger Cues:** Your baby will exhibit hunger cues like root reflex (when they turn their head towards your nipple), sucking on hands or lips, or making small sounds.
-5. **Monitor Output:** Check your baby's diaper to ensure they're getting enough milk. Aim for 1-2 wet diapers and 1-2 bowel movements) in the first 24 hours, increasing to 6-8 wet diapers and 2-3 bowel movements by day 3-4.
-7. **Get Support:** If you're having trouble with latching, feeding, or experiencing nipple soreness, consider consulting a lactation consultant or your healthcare provider.
+How does that sound? Do you have any specific exercise plans or concerns in mind?
 
-Remember, feeding your newborn is a learning process for both you and your baby. Be patient, and don't hesitate to seek guidance if you need it.
+",4148.753899993608,0.25390625,46.761028654965266,0.0,0.09345794392523363,0.0,0.6994656324386597
+Q4,How often should I feed my newborn?,"Congratulations on your new baby! Feeding your newborn is a wonderful way to bond and provide essential nutrients. Here are some tips to get you started:
 
-Would you like more information on breastfeeding, or is there a specific concern you'd like to discuss?
+1. **Breastfeeding is best**: If possible, breastfeed your baby within the first hour of life. This helps with bonding, regulates your baby's body temperature, and provides antibodies for immunity.
+2. **Frequency and duration**: Newborns usually feed every 2-3 hours, around the clock. Feedings can last anywhere from 10-30 minutes, depending on your baby's needs.
+3. **Look for hunger cues**: Pay attention to your baby's signals, such as rooting (when they turn their head towards your nipple), sucking on their hands, or making small sounds.
+4. **Latching and positioning**: Help your baby latch by holding them close, supporting their head, and guiding them to your nipple. Make sure your baby's mouth covers the entire areola.
+5. **Monitor for proper latch**: Check that your baby is latching correctly by feeling for a ""tug"" on your nipple and seeing if their mouth is sealed around the areola.
+6. **Burp and switch sides**: Burp your baby after feedings to help with digestion. Switch breasts during feedings to ensure equal milk production.
 
-",4725.086399994325,0.0,55.02544884688506,0.0,0.125,0.6794117093086243
-What are common signs of postpartum depression?,"As a new mom, it's essential to be aware of the common signs of postpartum depression (PPD). While it's normal to experience some emotional ups and downs after childbirth, PPD can affect your ability to care for yourself and your baby.
+Remember, it's normal for breastfeeding to take some practice, so be patient and don't hesitate to ask for help if you need it. Your healthcare provider or a lactation consultant can offer guidance and support.
 
-Here are some common signs of postpartum depression:
+How does that sound? Do you have any specific questions or concerns about breastfeeding?
 
-1. **Feeling overwhelmed and hopeless**: You might feel like you're unable to cope with your emotions, and that things will never get better.
-2. **Extreme mood swings**: You may experience intense highs and lows, irritability, or sudden changes in mood that can be unsettling for you and those around you.
-3. **Difficulty bonding with your baby**: You might struggle to form an emotional connection with your baby, which can make feeding, caring, and enjoying time with them feel challenging.
-4. **Lack of interest in activities**: You might lose interest in activities you once enjoyed, including self-care, socializing, or hobbies.
-5. **Feeling anxious or on edge**: You may feel perpetually anxious, fearful, or on edge, which can make it difficult to relax or get a good night's sleep.
-6. **Changes in sleep and appetite**: You might experience changes in your sleep patterns, appetite, or digestion, which can impact your energy levels and overall well-being.
-7. **Feeling inadequate or guilty**: You may experience feelings of inadequacy, guilt, or shame, which can be overwhelming and affect your self-esteem.
+",4657.970200001728,0.0,38.85812751655922,0.0,0.10784313725490197,0.017516992085448258,0.6168583035469055
+Q5,What are common signs of postpartum depression?,"Congratulations on taking the first step in prioritizing your mental health during this special time!
 
-Remember, it's essential to distinguish between ""baby blues"" (mild, short-term feelings of sadness or worry) and postpartum depression. If you're experiencing any of these symptoms, please reach out to your healthcare provider or a mental health professional for support.
+Common signs of postpartum depression (PPD) can vary from woman to woman, but here are some common ones to look out for:
 
-How are you feeling, and is there anything that's been concerning you lately?
+1. **Feeling overwhelmed or hopeless**: You might feel like you're struggling to cope with your new role as a mom, or that you're not good enough.
+2. **Mood swings**: You might experience sudden shifts in your mood, such as feeling sad, anxious, or irritable.
+3. **Crying or tearfulness**: You might feel like crying for no reason, or that you're unable to stop crying.
+4. **Fatigue or exhaustion**: You might feel physically or emotionally drained, making it hard to care for yourself or your baby.
+5. **Sleep disturbances**: You might have trouble sleeping or experience vivid dreams/nightmares.
+6. **Loss of interest in activities**: You might lose interest in activities you used to enjoy, including spending time with your baby.
+7. **Feeling disconnected from your baby**: You might feel like you're not bonding with your baby or that you're not feeling the emotions you expected to feel.
+8. **Anxiety or panic attacks**: You might experience feelings of intense anxiety or have panic attacks.
+9. **Changes in appetite or eating habits**: You might experience changes in your appetite or develop unhealthy eating habits.
+10. **Thoughts of self-harm or suicide**: If you're having these thoughts, it's essential to reach out for help immediately.
 
-",4721.714599989355,0.0,58.45334235165807,0.0,0.11278195488721804,0.6652480959892273
+Remember, it's essential to reach out for support if you're experiencing any of these symptoms. You can talk to your healthcare provider, a therapist, or a support group for help.
+
+How are you feeling right now? Do you have any concerns or questions about postpartum depression?
+
+",4228.509300010046,0.25,56.04812078796586,0.0,0.06976744186046513,0.0,0.6851543188095093
+Q6,How do I know if my baby is getting enough milk?,"As a new mom, it's natural to wonder if your baby is getting enough milk. Here are some signs to look out for:
+
+1. **Frequent feedings**: Newborns usually feed every 2-3 hours, around the clock. If your baby is feeding frequently, it's a good sign they're getting enough milk.
+2. **Wet diapers**: If your baby is having 6-8 wet diapers a day, it's a sign they're getting enough milk and staying hydrated.
+3. **Stool frequency**: Newborns typically have 1-4 bowel movements a day. If your baby is having regular bowel movements, it indicates they're getting enough milk.
+4. **Contentment**: A happy, content baby who's full and satisfied after feedings is a good sign they're getting enough milk.
+5. **Weight gain**: Your baby should gain 1-2 pounds (0.5-1 kg) per week in the first few weeks. If your baby is gaining weight, it's a sign they're getting enough milk.
+
+Additionally, pay attention to your baby's behavior during feedings:
+
+* Are they actively sucking and swallowing milk?
+* Are they latched correctly and comfortably?
+* Do they seem satisfied and full after feedings?
+
+Remember, every baby is different, and what works for one baby might not work for another. If you're concerned about your baby's milk intake or have questions, always consult with your healthcare provider or a lactation consultant.
+
+",6430.193699998199,0.25390625,28.148452199822643,0.0,0.18666666666666665,0.0,0.716701865196228
+Q7,What is the best way to soothe a colicky baby?,"I'm so sorry to hear that your little one is experiencing colic! Soothing a colicky baby can be challenging, but don't worry, I've got some helpful tips to share with you.
+
+Here are some effective ways to soothe a colicky baby:
+
+1. **The ""5 S's""**: The ""5 S's"" are a method developed by Dr. Harvey Karp that can be very helpful in calming a colicky baby. They are:
+	* **Swaddling**: Wrap your baby snugly to help them feel secure and comforted.
+	* **Shushing**: Make a ""shhh"" sound next to your baby's ear to mimic the sound of the womb.
+	* **Side/stomach position**: Hold your baby on their side or stomach, as this can help them feel more secure and calm.
+	* **Swinging**: Gently rock your baby back and forth, or use a baby swing to help them feel soothed.
+	* **Sucking**: Offer your baby a pacifier or let them suck on their thumb to provide a calming, self-soothing activity.
+2. **Gas relief**: Colic can sometimes be caused by gas or digestion issues. You can try:
+	* **Gripe water**: A natural remedy that can help soothe your baby's stomach.
+	* **Gas drops**: Over-the-counter drops that can help break down gas bubbles in your baby's tummy.
+3. **Motion and movement**: Many babies find motion comforting, so try:
+	* **Car rides**: A short drive can be very soothing for a colicky baby.
+	* **Baby carriers**: Wear your baby in a carrier to provide a sense of security and comfort.
+	* **Rocking chairs**: Gently rock your baby in a rocking chair to help them feel calm.
+4. **Warmth and touch**: Sometimes, a colicky baby just needs some extra comfort and physical touch. Try:
+	* **Warm baths**: A warm bath can be very soothing for a fussy baby.
+	* **Skin-to-skin contact**: Hold your baby against your bare chest to provide a sense of security and comfort.
+5. **Check for other issues**: If your baby continues to experience colic, it's essential to rule out any underlying medical issues, such as:
+	* **Food intolerance**: If you're breastfeeding, your doctor may recommend an elimination diet to see if a particular food is causing the issue.
+	* **Reflux**: Gastroesophageal reflux (GERD) can cause discomfort and colic-like symptoms.
+
+Remember, it's essential to consult with your healthcare provider to rule out any underlying medical issues and to discuss the best approach for soothing your colicky baby.
+
+How have you been coping with your baby's colic so far? Have you tried any of these methods, or is there something specific you're concerned about?
+
+",26980.747600013274,0.1875,14.60300529255187,0.0,0.05517241379310346,0.0,0.623888373374939
+Q8,When should I schedule my baby's first doctor appointment?,"Congratulations on your new baby!
+
+Scheduling your baby's first doctor appointment is essential to ensure they receive proper care and monitoring during the first few weeks of life. Here's why:
+
+1. **Check-up and assessment**: The first appointment, usually within 1-3 days after birth, is a vital check-up to assess your baby's overall health, weight, and vital signs.
+2. **Newborn screenings**: Your baby will undergo various screenings, such as a hearing test, vision test, and blood tests to detect any potential health issues.
+3. **Vitamin K injection**: Your baby may receive a Vitamin K injection to help with blood clotting and prevent bleeding.
+4. **Immunizations**: Your baby may receive their first immunizations, depending on the doctor's recommendations and the hospital's policy.
+5. **Breastfeeding support**: If you're breastfeeding, your doctor or a lactation consultant can provide guidance and support to ensure a smooth transition.
+6. **Answering questions and concerns**: This appointment is an excellent opportunity to ask your doctor any questions or address any concerns you may have about your baby's care.
+
+Typically, the first doctor appointment is scheduled within the first week after birth, often around 3-5 days postpartum. However, it's essential to follow your healthcare provider's specific instructions and schedule.
+
+Remember to write down any questions or concerns you have and don't hesitate to ask your doctor about anything that's on your mind.
+
+",34251.71680000494,0.25390625,5.693145284909393,0.0,0.10909090909090909,0.0,0.6291250586509705
+Q9,Is it normal to feel overwhelmed after childbirth?,"Congratulations on your new baby!
+
+Feeling overwhelmed after childbirth is completely normal. In fact, it's a common experience for many new moms. The transition to motherhood can be a significant life change, and it's natural to feel overwhelmed by the new responsibilities, emotions, and physical changes that come with it.
+
+Here are some reasons why you might be feeling overwhelmed:
+
+1. **Hormonal changes**: The sudden drop in hormone levels after childbirth can lead to feelings of anxiety, sadness, and emotional instability.
+2. **Sleep deprivation**: New parents often experience sleep disturbances, which can exacerbate feelings of fatigue, irritability, and overwhelm.
+3. **Physical recovery**: The physical changes and discomforts after childbirth, such as pain, bleeding, or breastfeeding challenges, can be overwhelming.
+4. **Emotional adjustment**: Becoming a new mom can be an emotional rollercoaster. You may feel anxious, worried, or uncertain about your new role.
+5. **Lack of support**: If you're not receiving sufficient support from your partner, family, or friends, you may feel overwhelmed by the responsibilities of caring for a newborn.
+
+Remember, it's essential to acknowledge and validate your feelings. You're not alone, and many women have experienced similar emotions after childbirth.
+
+Here are some tips to help you cope with feelings of overwhelm:
+
+1. **Reach out for support**: Talk to your partner, family, or friends about how you're feeling. Don't be afraid to ask for help with caring for your baby or household chores.
+2. **Prioritize self-care**: Make time for activities that bring you joy and relaxation, such as reading, taking a warm bath, or practicing gentle exercises.
+3. **Join a support group**: Connect with other new moms who may be experiencing similar emotions. Online forums or local support groups can provide a safe space to share your feelings and receive guidance.
+4. **Take breaks**: It's okay to take short breaks and ask someone to watch your baby while you rest, take a walk, or enjoy some quiet time.
+5. **Seek professional help**: If your feelings of overwhelm persist or are severe, consider speaking with a healthcare provider or a therapist who specializes in postpartum support.
+
+Remember, it's okay to not have all the answers, and it's normal to feel overwhelmed. With time, support, and self-care, you'll find your footing as a new mom.
+
+How are you feeling right now? Is there something specific that's causing you to feel overwhelmed?
+
+",36144.189000013284,0.2265625,9.296100128291066,0.0,0.1126005361930295,0.02534651412156884,0.7683375477790833
+Q10,What are baby blues and how are they different from postpartum depression?,"Congratulations on your new baby!
+
+You're wise to ask about the baby blues and postpartum depression (PPD). While they share some similar symptoms, they are distinct conditions with different severity, duration, and impact on new mothers.
+
+**Baby Blues:**
+
+The baby blues, also known as postpartum emotional reactivity, are a normal and common experience for many new mothers. It's estimated that up to 80% of new mothers experience some degree of baby blues.
+
+ Symptoms of baby blues may include:
+
+* Mood swings
+* Irritability
+* Anxiety
+* Crying or tearfulness
+* Feeling overwhelmed
+* Insomnia or fatigue
+* Appetite changes
+
+These symptoms usually appear within the first few days after childbirth and can last up to two weeks. The baby blues are thought to be caused by the sudden hormonal changes after childbirth, particularly the drop in estrogen and progesterone levels.
+
+**Postpartum Depression (PPD):**
+
+Postpartum depression is a more severe and longer-lasting condition that affects around 10-15% of new mothers.
+
+Symptoms of PPD may include:
+
+* Intense feelings of sadness, hopelessness, or helplessness
+* Loss of interest in activities, including caring for the baby
+* Changes in appetite or sleep patterns
+* Fatigue or loss of energy
+* Difficulty bonding with the baby
+* Suicidal thoughts or feelings (in severe cases)
+
+PPD can start anytime within the first year after childbirth, and its symptoms can be more intense and persistent than those of the baby blues.
+
+**Key differences:**
+
+1. **Duration:** Baby blues are short-term, lasting up to two weeks, while PPD can persist for months or even a year or more.
+2. **Severity:** Baby blues are generally milder, while PPD is a more severe condition that can interfere with daily life and relationships.
+3. **Impact:** Baby blues may not significantly affect daily life, whereas PPD can make it challenging to care for the baby, maintain relationships, and perform daily tasks.
+4. **Treatment:** Baby blues often resolve on their own with support and self-care, while PPD may require professional treatment, such as therapy or medication.
+
+If you're experiencing symptoms of PPD, it's essential to reach out to your healthcare provider or a mental health professional for guidance and support.
+
+How are you feeling right now? Do you have any concerns about your emotional well-being or the baby blues?
+
+",42745.20379999012,0.25390625,8.679336323578033,0.0,0.08737864077669902,0.0,0.886747419834137
+Q11,How can I increase my breast milk supply?,"Congratulations on your decision to breastfeed!
+
+Increasing breast milk supply can be achieved through a combination of effective breastfeeding techniques, lifestyle changes, and galactagogues (substances that help increase milk production). Here are some tips to help you boost your breast milk supply:
+
+1. **Frequent and effective breastfeeding**: Nurse your baby frequently, aiming for 8-12 feedings in 24 hours. Ensure a good latch and proper positioning to stimulate milk production.
+2. **Skin-to-skin contact and kangaroo care**: Hold your baby against your bare chest, as this promotes bonding, relaxation, and milk production.
+3. **Proper latch and positioning**: Ensure a comfortable and effective latch by supporting your baby's head, keeping their mouth aligned with your nipple, and using pillows for support if needed.
+4. **Monitor for proper attachment**: Check that your baby is attached correctly, with their mouth covering the entire areola. This helps stimulate milk production and promotes efficient feeding.
+5. **Avoid nipple shields and bottles**: Nipple shields and bottles can hinder milk production and create nipple confusion. Instead, focus on frequent, effective breastfeeding sessions.
+6. **Get enough rest and relaxation**: Aim for 1-2 hours of rest or relaxation per day to help reduce stress, which can negatively impact milk production.
+7. **Stay hydrated**: Drink plenty of water (at least 8-10 glasses a day) to help with milk production and overall health.
+8. **Galactagogues**: Consider incorporating galactagogues into your diet, such as:
+	* Oatmeal: Eat oatmeal cookies, oatmeal porridge, or add oats to your smoothies.
+	* Leafy greens: Consume leafy greens like spinach, kale, and fenugreek to boost milk production.
+	* Herbs and spices: Try herbs like fenugreek, blessed thistle, and galactagogue tea to support milk production.
+	* Protein-rich foods: Include protein-rich foods like chicken, fish, and beans in your diet to support milk production.
+9. **Expressing breast milk**: Express milk regularly to stimulate milk production, relieve engorgement, and store milk for future feedings.
+10. **Get professional help**: If you're concerned about your milk supply or need personalized guidance, consult a lactation consultant or your healthcare provider.
+
+Remember, every baby is different, and it may take some trial and error to find the right combination of techniques that work for you and your baby. Be patient, and don't hesitate to reach out for support if you need it.
+
+How's your breastfeeding journey going so far? Do you have any specific concerns or questions about increasing your milk supply?
+
+",48960.08160000201,0.25390625,7.128256093429093,0.0,0.0731070496083551,0.0,0.7490708827972412
+Q12,How much sleep does a newborn need?,"Congratulations on your new baby!
+
+Newborns need a lot of sleep, and it's essential to understand their sleep patterns to ensure they get the rest they need. Here's what you can expect:
+
+**Newborn sleep patterns:**
+
+* Newborns sleep for 16-20 hours in a 24-hour period, spread across multiple short naps and overnight sleep.
+* They have a unique sleep cycle, which is shorter than adults', with shorter periods of deep sleep and more frequent awakenings.
+* Newborns can't regulate their body temperature, so they need to wake up frequently to feed and maintain their body heat.
+
+**Sleep schedule:**
+
+* In the first few weeks, newborns typically sleep in short stretches of 2-4 hours, with frequent feedings and diaper changes in between.
+* As they grow, they start to consolidate their sleep, with longer stretches of sleep at night (around 4-6 hours) and shorter naps during the day.
+* By around 6-8 weeks, babies start to establish a more predictable sleep schedule, with 2-3 longer naps during the day and longer stretches of sleep at night.
+
+**Tips for promoting healthy sleep:**
+
+* Establish a bedtime routine to help your baby learn to self-soothe and settle down for sleep.
+* Create a sleep-friendly environment, such as keeping the room dark, quiet, and at a comfortable temperature.
+* Watch for sleepy cues, like yawning, rubbing their eyes, or becoming less active.
+* Help your baby develop good sleep habits by placing them in their bed awake, so they can learn to self-soothe and fall asleep independently.
+
+Remember, every baby is unique, and their sleep needs may vary. Be flexible, and don't hesitate to reach out to your healthcare provider if you have concerns about your baby's sleep or overall health.
+
+How's your baby's sleep been so far? Do you have any specific questions about their sleep patterns or habits?
+
+",54240.59699999634,-8.01953125,4.922512191376102,0.0,0.09966777408637872,0.02281692105482588,0.8718516826629639
+Q13,Can I take painkillers while breastfeeding?,"Congratulations on your new baby!
+
+As a breastfeeding mom, it's essential to consider the safety of any medications you take, including painkillers. While some painkillers are compatible with breastfeeding, others may not be suitable or may require caution.
+
+**Acetaminophen (Tylenol) and ibuprofen (Advil, Motrin)**:
+
+* These over-the-counter painkillers are generally considered safe for breastfeeding mothers in normal doses.
+* However, it's essential to follow the recommended dosage and consult with your healthcare provider if you have any concerns.
+
+**Other painkillers**:
+
+* **Codeine and hydrocodone**: These opioid painkillers can be used in short periods and in low doses, but they may cause drowsiness or lethargy in the baby.
+* **Aspirin**: While generally safe, high doses of aspirin can increase the risk of bleeding in the baby. Consult with your healthcare provider before using aspirin.
+* **Narcotics (e.g., oxycodone, morphine)**: These strong painkillers are not recommended for breastfeeding mothers, as they can cause sedation, respiratory depression, and other adverse effects in the baby.
+
+**General guidelines**:
+
+* Always consult with your healthcare provider before taking any medication, including painkillers, while breastfeeding.
+* Use the lowest effective dose for the shortest duration necessary to minimize the amount of medication in your breast milk.
+* Monitor your baby for signs of sedation, lethargy, or other unusual behaviors, and report any concerns to your healthcare provider.
+
+Remember, it's crucial to prioritize your health and manage your pain effectively, but it's equally important to ensure the safety of your baby while breastfeeding.
+
+How are you managing your pain after childbirth? Have you discussed pain management with your healthcare provider?
+
+",55797.944899997674,0.3359375,4.157859226102245,0.0,0.1328125,0.03609020609814274,0.8480201959609985
+Q14,What are signs of a good latch during breastfeeding?,"Error generating answer: Error code: 413 - {'error': {'message': 'Request too large for model `llama3-70b-8192` in organization `org_01jkrd1j9redc8b9cbm180dshs` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6427, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+",4097.498100003577,0.25390625,12.690670924278063,0.0,0.06976744186046513,0.0,0.062202371656894684
