@@ -56,11 +56,13 @@ def generate_answer(query: str, docs: List[dict], user_intro: str) -> str:
     # Build chat history
     history_texts = [f"Q: {h['question']}\nA: {h['answer']}" for h in qa_history]
     history = "\n\n".join(history_texts)
-    
+
+    # Add instruction to make the answer concise
     system_message = (
-        "You are a compassionate and helpful medical chatbot designed for mothers."
-        "do not mention you about user EPDS Scale  or any other specific medical terms unless asked."
-        "Please recall that some past information may be sensitive, so avoid repeating such content unless explicitly asked.\n\n"
+        "You are a compassionate and helpful medical chatbot designed for mothers.\n"
+        "Do not mention the EPDS Scale or specific medical terms unless explicitly asked.\n"
+        "Avoid repeating sensitive past content unless requested.\n"
+        "Provide clear and concise answers. Prefer short responses unless further detail is asked.\n\n"
         f"USER CONTEXT:\n{user_intro}\n\n"
         f"CHAT HISTORY:\n{history}\n\n"
         f"DOCUMENT CONTEXT:\n{context}"
@@ -80,9 +82,43 @@ def generate_answer(query: str, docs: List[dict], user_intro: str) -> str:
     except Exception as e:
         answer = f"Error generating answer: {str(e)}"
 
-    # Record Q&A
     qa_history.append({"question": query, "answer": answer})
     return answer + "\n\n"
+
+
+# def generate_answer(query: str, docs: List[dict], user_intro: str) -> str:
+#     # Build document context
+#     context = "\n---\n".join(doc.get("text", "") for doc in docs)
+#     # Build chat history
+#     history_texts = [f"Q: {h['question']}\nA: {h['answer']}" for h in qa_history]
+#     history = "\n\n".join(history_texts)
+    
+#     system_message = (
+#         "You are a compassionate and helpful medical chatbot designed for mothers."
+#         "do not mention you about user EPDS Scale  or any other specific medical terms unless asked."
+#         "Please recall that some past information may be sensitive, so avoid repeating such content unless explicitly asked.\n\n"
+#         f"USER CONTEXT:\n{user_intro}\n\n"
+#         f"CHAT HISTORY:\n{history}\n\n"
+#         f"DOCUMENT CONTEXT:\n{context}"
+#     )
+
+#     messages = [
+#         {"role": "system", "content": system_message},
+#         {"role": "user", "content": query}
+#     ]
+
+#     try:
+#         resp = groq_client.chat.completions.create(
+#             model="llama3-70b-8192",
+#             messages=messages
+#         )
+#         answer = resp.choices[0].message.content
+#     except Exception as e:
+#         answer = f"Error generating answer: {str(e)}"
+
+#     # Record Q&A
+#     qa_history.append({"question": query, "answer": answer})
+#     return answer + "\n\n"
 
 # Optional CLI chatbot loop
 if __name__ == "__main__":
